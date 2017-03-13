@@ -1,0 +1,26 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color: #FAFAFA;
+}
+#btn_start,#btn_stop{
+	-fx-font-size: 18px;
+	-fx-cursor: pointer;
+	-fx-text-fill: #ffffff;
+	-fx-background-color: #26A69A;
+	-fx-font-weight: bold;
+}
+#btn_start:hover,#btn_stop:hover{
+	-fx-background-color: #009688;
+	-fx-border-color: #00897B;
+	
+}
+
+#resolution{
+	-fx-cursor: pointer;
+	-fx-text-fill: #ffffff;
+	-fx-background-color: #B2DFDB;
+}
+#resolution:hover{
+	-fx-background-color: #80CBC4;
+}
+

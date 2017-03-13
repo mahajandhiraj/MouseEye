@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <HBox prefHeight="300.0" prefWidth="800.0">
+         <children>
+            <ImageView fx:id="original" fitHeight="240.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="30.0" top="30.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox prefHeight="300.0" prefWidth="800.0">
+         <children>
+            <ImageView fx:id="filtered" fitHeight="240.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="30.0" left="30.0" top="30.0" />
+               </HBox.margin>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="300.0" prefWidth="480.0">
+               <children>
+                  <ComboBox fx:id="resolution" onAction="#resolutionChanged" prefWidth="200.0" promptText="Screen resolution">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <HBox alignment="CENTER" prefHeight="83.0" prefWidth="450.0">
+                     <VBox.margin>
+                        <Insets top="120.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startCamera" text="Start">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="6.0" left="15.0" right="15.0" top="6.0" />
+                           </padding>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_stop" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#stopCamera" text="Stop">
+                           <padding>
+                              <Insets bottom="6.0" left="15.0" right="15.0" top="6.0" />
+                           </padding>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
