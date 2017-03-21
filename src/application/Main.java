@@ -6,6 +6,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.fxml.FXMLLoader;
 
 
@@ -19,7 +20,9 @@ public class Main extends Application {
 			Scene scene = new Scene(root,800,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
+			primaryStage.getIcons().add(new Image("file:icon.png"));
 			primaryStage.setTitle("MouseEye");
+			primaryStage.setResizable(false);
 			primaryStage.show();
 			
 			// set the proper behavior on closing the application

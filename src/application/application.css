@@ -2,14 +2,14 @@
 .root{
 	-fx-background-color: #FAFAFA;
 }
-#btn_start,#btn_stop{
+#btn_start,#btn_stop,#btn_set{
 	-fx-font-size: 18px;
 	-fx-cursor: pointer;
 	-fx-text-fill: #ffffff;
 	-fx-background-color: #26A69A;
 	-fx-font-weight: bold;
 }
-#btn_start:hover,#btn_stop:hover{
+#btn_start:hover,#btn_stop:hover,#btn_set:hover{
 	-fx-background-color: #009688;
 	-fx-border-color: #00897B;
 	
@@ -22,5 +22,12 @@
 }
 #resolution:hover{
 	-fx-background-color: #80CBC4;
+}
+
+.label{
+	-fx-font-size: 16px;
+	-fx-cursor: pointer;
+	-fx-text-fill: #26A69A;
+	-fx-font-weight: bold;
 }
 

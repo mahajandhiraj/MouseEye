@@ -14,7 +14,7 @@ import org.bytedeco.javacpp.opencv_core.IplImage;
 import org.bytedeco.javacpp.opencv_imgproc.CvMoments;
 
 //color contour moment filter
-public class ccmFilter {
+public class ccmFilterSet {
 	//temp  variable
 	public static int t;
 
@@ -26,8 +26,7 @@ public class ccmFilter {
 		double moment10, moment01, areaMax, areaC=0,m_area;
 		int posX=0,posY=0;
 
-		//Class provided by java to control mouse cursor movements
-		Robot rbt = new Robot();
+		
 		
 		opencv_imgproc.cvCvtColor(img,imghsv,opencv_imgproc.CV_BGR2HSV);
 		
@@ -73,32 +72,6 @@ public class ccmFilter {
 		m_area = opencv_imgproc.cvGetCentralMoment(moments, 0, 0);
 		
 		
-		posX = (int) (moment10/m_area);
-		posY = (int) (moment01/m_area);
-		
-		if(b==1)
-		{
-			if(posX > 0 && posY > 0) 
-			{		
-				rbt.mouseMove( posX*widthratio,posY*heightratio);
-			}
-		}	
-		
-		if(g==1)
-		{
-			if(posX > 0 && posY > 0) 
-			{
-				//BUTTON1_MASK is used to control lift click
-				rbt.mousePress(InputEvent.BUTTON1_MASK);
-				t++;
-			}
-			else if(t>0)
-			{
-				rbt.mouseRelease(InputEvent.BUTTON1_MASK);
-				t=0;
-			}
-			
-		}
 		
 	
 		return imgBin;
